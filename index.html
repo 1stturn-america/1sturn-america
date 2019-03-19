@@ -2,17 +2,22 @@
 <html>
  <head>
  <script type="text/javascript">
- function myfunction(txt)
- {
- alert(txt)
- }
+ public class Test {
+   public void pupAge() {
+      int age = 0;
+      age = age + 7;
+      System.out.println("Puppy age is : " + age);
+   }
  </script>
  </head>
+
  <body>
- <form>
- <input type="button" onclick="myfunction('Good Morning')" value="In the Morning">
- <input type="button" onclick="myfunction('Good Evening')" value="In the Evening">
- </form>
- <p>By pressing a button, a function will be called. The function will alert using the argument passed to it.
+ <script type="text/javascript">
+   public static void main(String args[]) {
+      Test test = new Test();
+      test.pupAge();
+   }
+}
+ </script>
  </body>
  </html>
