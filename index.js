@@ -1,4 +1,5 @@
-public class MyFirstJavaProgram {
+<script>
+   public class MyFirstJavaProgram {
 
    /* This is my first java program.
     * This will print 'Hello World' as the output
@@ -8,3 +9,4 @@ public class MyFirstJavaProgram {
       System.out.println("Hello World"); // prints Hello World
    }
 }
+</script>
