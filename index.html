@@ -1,12 +1,18 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<p> starting </p>
-<p>Before the script...</p>
-  <script>
-    alert( 'Hello, world!' );
-    src="https://1stturn-america.github.io/1sturn-america/Test.java">
-   </script>
-
-  <p>...After the script.</p>
-   
-</html>
+ <head>
+ <script type="text/javascript">
+ function myfunction(txt)
+ {
+ alert(txt)
+ }
+ </script>
+ </head>
+ <body>
+ <form>
+ <input type="button" onclick="myfunction('Good Morning')" value="In the Morning">
+ <input type="button" onclick="myfunction('Good Evening')" value="In the Evening">
+ </form>
+ <p>By pressing a button, a function will be called. The function will alert using the argument passed to it.
+ </body>
+ </html>
