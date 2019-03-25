@@ -27,7 +27,7 @@
    </tr>
     <tr> 
        <td width=132>
-  <label for="Score1">PL</label>
+  <label for="Score1" id="golFer1"></label>
   <select name="Score1">
   <option value="1">1</option>
   <option value="2">2</option>
@@ -53,7 +53,7 @@
        <br><br>
      </tr>
    <tr>
-  <td width=132><label for="Score2">SB</label>
+  <td width=132><label for="Score2" id="golFer2"></label>
   <select name="Score2">
   <option value="1">1</option>
   <option value="2">2</option>
@@ -79,7 +79,7 @@
    </tr>
    <tr>
     <td>
-  <label for="Score3">MF</label>
+  <label for="Score3" id="golFer3"></label>
   <select name="Score3">
   <option value="1">1</option>
   <option value="2">2</option>
@@ -105,7 +105,7 @@
     </tr>
    <tr>
      <td>
-  <label for="Score4" id="golFer4">GW</label>
+  <label for="Score4" id="golFer4"></label>
   <select name="Score4">
   <option value="1">1</option>
   <option value="2">2</option>
@@ -140,6 +140,18 @@
  var firstHole="Hole 19";
  document.getElementById("demo").innerHTML = firstHole;
   </script> 
+<script>
+var golfPlayer1 = "Patr";
+document.getElementById('golFer1').innerHTML = golfPlayer1;
+</script>
+<script>
+var golfPlayer2 = "Scot";
+document.getElementById('golFer2').innerHTML = golfPlayer2;
+</script>
+<script>
+var golfPlayer3 = "Matt";
+document.getElementById('golFer3').innerHTML = golfPlayer3;
+</script>
 <script>
 var golfPlayer4 = "Greg";
 document.getElementById('golFer4').innerHTML = golfPlayer4;
