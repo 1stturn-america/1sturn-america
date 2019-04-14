@@ -34,7 +34,6 @@
         console.log(response.result);
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
-        populateSheet(response.result);
       });
     }
     function initClient() {
@@ -71,13 +70,6 @@
     function handleSignOutClick(event) {
       gapi.auth2.getAuthInstance().signOut();
     }
-    function populateSheet(result) {
-      for(var row=0; row<9; row++) {
-         for(var col<0; col<3; col++) {
-            document.getElementById(row+”:”+col).value=result.values[row][col];
-         }
-      }
-    }
     </script>
     <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
@@ -85,17 +77,5 @@
     </script>
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
-    <div style=“margin-left:auto; margin-rightLauto; width:960px”>
-    
-    <?php
-
-        for($row=0; $row < 9; $row++) {
-             echo “<div style=‘clear:both’>”;
-         for($col=0; $col<3; $col++) {
-             echo ”<input type=‘text’ style=‘float:left;‘ name = ‘$row:$col’ id= ‘$row:$col’>”;
-         }
-         echo “</div>";         
-        }
-    ?>
   </body>
-</html>
+</html> 
