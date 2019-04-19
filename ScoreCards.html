@@ -115,7 +115,6 @@ td.blankLast
 	}
 </style>
 </head>
-
 <body>
 
 <div style="border: 3px solid rgb(201, 0, 1); overflow: hidden; margin: 35px auto; max-width: 800px;">
@@ -307,6 +306,7 @@ td.blankLast
         console.log(response.result);
         var golfers =  response.result.values;
 scoreCardHeader(response.result);
+scoreDetail(response.result)
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
@@ -372,6 +372,7 @@ query = player.value+"!B59:L69";
 makeApiCall(query)
 }
 </script>  
+
 <script>
 function scoreCardHeader(result)
 {
@@ -391,9 +392,11 @@ for (var i = 0; i < table1.rows.length; i++)
 }
 }
 </script>
-    
-</script>
+  
 <script>
+function scoreDetail(result)
+{
+var golfers = result.values;
     table = document.getElementById("table");
 //rows
 for (var i = 0; i < table.rows.length; i++)
@@ -404,8 +407,12 @@ for (var i = 0; i < table.rows.length; i++)
         table.rows[i].cells[j].innerHTML = golfers[i+1] [j];
     }
 }
+}
 </script>
+
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
+
+<!-- ****Below is the Footer Code -->
 </body>
 </html>
