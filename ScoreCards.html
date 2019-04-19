@@ -117,6 +117,8 @@ td.blankLast
 </head>
 <body>
 
+<div style="border: 3px solid rgb(255, 255, 255); overflow: hidden; margin: 35px auto; max-width: 800px;">
+
 <select name="formal" onchange="javascript:handleSelect(this)">
 <option value="Player1">Select A Player</option>
 <option value="Player1">Bryeans</option>
@@ -128,7 +130,7 @@ td.blankLast
 <option value="Player7">Schwartz</option>
 <option value="Player8">Wolf</option>
 </select>
-
+</div>
 	
 <div style="border: 3px solid rgb(201, 0, 1); overflow: hidden; margin: 35px auto; max-width: 800px;">
 
@@ -282,8 +284,6 @@ td.blankLast
 <td>102</td>
 </tr>
 </table>
-
-
     <!--
     BEFORE RUNNING:
     ---------------
@@ -298,7 +298,6 @@ td.blankLast
     <script>
     function makeApiCall(query) {
     range = query
-
     var params = {
         // The ID of the spreadsheet to retrieve data from.
         spreadsheetId: '11sgLVqsMiHLXE61TU6iLbGDh7IPUWuOJE3shXQARshQ',  // TODO: Update placeholder value.
@@ -364,7 +363,6 @@ scoreDetail(response.result)
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
-
 <script type="text/javascript">
 function handleSelect(player)
 {
@@ -372,16 +370,12 @@ query = player.value+"!B59:L69";
 makeApiCall(query)
 }
 </script>  
-
 <script>
 function scoreCardHeader(result)
 {
 var golfers = result.values;
-
 document.getElementById("table1");
-
 //rows
-
 for (var i = 0; i < table1.rows.length; i++)
 {
    //cells
@@ -412,7 +406,6 @@ for (var i = 0; i < table.rows.length; i++)
 	</div>
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
-
 <!-- ****Below is the Footer Code -->
 </body>
 </html>
