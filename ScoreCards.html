@@ -52,7 +52,7 @@ td.blankLast
 </head>
 <body bgcolor="#023C78">
 <!-- *Below is Banner Code -->
-   <table>
+<table>
 <tr>
 <td><a href="index.html"> <img border="0" src="DAMS2020LOGO.png"></td> 
 <td><a href="ScoreCards.html"> <img border="0" src="ScoreCards.png"></td> 
@@ -117,6 +117,19 @@ td.blankLast
 </head>
 <body>
 
+<select name="formal" onchange="javascript:handleSelect(this)">
+<option value="Player1">Select A Player</option>
+<option value="Player1">Bryeans</option>
+<option value="Player2">Fiascone</option>
+<option value="Player3">Holtz</option>
+<option value="Player4">Lowery</option>
+<option value="Player5">Lyons</option>
+<option value="Player6">McCalpin</option>
+<option value="Player7">Schwartz</option>
+<option value="Player8">Wolf</option>
+</select>
+
+	
 <div style="border: 3px solid rgb(201, 0, 1); overflow: hidden; margin: 35px auto; max-width: 800px;">
 
 <table id=table1 class=a>
@@ -351,19 +364,6 @@ scoreDetail(response.result)
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
-
-
-<select name="formal" onchange="javascript:handleSelect(this)">
-<option value="Player1">Select A Player</option>
-<option value="Player1">Bryeans</option>
-<option value="Player2">Fiascone</option>
-<option value="Player3">Holtz</option>
-<option value="Player4">Lowery</option>
-<option value="Player5">Lyons</option>
-<option value="Player6">McCalpin</option>
-<option value="Player7">Schwartz</option>
-<option value="Player8">Wolf</option>
-</select>
 
 <script type="text/javascript">
 function handleSelect(player)
