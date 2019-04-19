@@ -93,11 +93,6 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
-    <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
-    <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
-  </body>
-</html> 
-
 <style>
 table.a {
   border-style: double;
@@ -112,7 +107,7 @@ table.a {
 </style>
 
 <div style="border: 3px solid rgb(201, 0, 1); overflow: hidden; margin: 35px auto; max-width: 600px;">
-<table>
+<table class=a>
 <tr>
 <td class=scoreEntry>
   2020 SUBURBIA (NET) STANDINGS
@@ -194,6 +189,10 @@ for (var i = 0; i < table.rows.length; i++)
 }
 }
 </script>
+</div>
+<button id="signin-button" onclick="handleSignInClick()">Sign in</button>
+<button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
+
 
 <!-- ****Above is the Entry Form -->
 
@@ -201,5 +200,5 @@ for (var i = 0; i < table.rows.length; i++)
 <table>
 </table>
 <!-- ****Below is the Footer Code -->
-   </body>
+</body>
 </html>
