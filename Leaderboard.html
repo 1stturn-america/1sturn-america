@@ -35,7 +35,7 @@
         // The ID of the spreadsheet to retrieve data from.
         spreadsheetId: '11sgLVqsMiHLXE61TU6iLbGDh7IPUWuOJE3shXQARshQ',  // TODO: Update placeholder value.
         // The A1 notation of the values to retrieve.
-        range: 'Leaderboard!C13:F21',  // TODO: Update placeholder value.
+        range: 'Leaderboard!C13:K21',  // TODO: Update placeholder value.
         // How values should be represented in the output.
         // The default render option is ValueRenderOption.FORMATTED_VALUE.
         // valueRenderOption: '',  // TODO: Update placeholder value.
@@ -93,6 +93,7 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
+
 <style>
 table.a {
   border-style: double;
@@ -112,21 +113,34 @@ table.a {
 <td class=scoreEntry>
   2020 SUBURBIA (NET) STANDINGS
 </td>
+<td class=scoreEntry>
+  2020 GHETTO (GROSS) STANDINGS
+</td>
 </tr>
 </table>
 
 <table id=table class=a>
 <tr>
-<th>11</th>
-<th>12</th>
-<th>13</th>
-<th>13</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
 </tr>
 <tr>
 <td>21</td>
 <td>22</td>
 <td>23</td>
 <td>24</td>
+<td>21</td>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>21</td>
 </tr>
 </tr>
 <tr>
@@ -134,6 +148,11 @@ table.a {
 <td>32</td>
 <td>33</td>
 <td>34</td>
+<td>31</td>
+<td>32</td>
+<td>33</td>
+<td>34</td>
+<td>31</td>
 </tr>
 </tr>
 <tr>
@@ -141,37 +160,67 @@ table.a {
 <td>42</td>
 <td>43</td>
 <td>44</td>
-</tr>
+<td>41</td>
+<td>42</td>
+<td>43</td>
+<td>44</td>
+<td>41</td>
 </tr>
 <tr>
 <td>51</td>
 <td>52</td>
 <td>53</td>
 <td>54</td>
+<td>51</td>
+<td>52</td>
+<td>53</td>
+<td>54</td>
+<td>51</td>
 </tr>
 <tr>
 <td>61</td>
 <td>62</td>
 <td>63</td>
 <td>64</td>
+<td>61</td>
+<td>62</td>
+<td>63</td>
+<td>64</td>
+<td>61</td>
 </tr>
 <tr>
 <td>71</td>
 <td>72</td>
 <td>73</td>
 <td>74</td>
+<td>71</td>
+<td>72</td>
+<td>73</td>
+<td>74</td>
+<td>71</td>
 </tr>
 <tr>
 <td>81</td>
 <td>82</td>
 <td>83</td>
 <td>84</td>
+<td>81</td>
+<td>82</td>
+<td>83</td>
+<td>84</td>
+<td>81</td>
 </tr>
 <tr>
 <td>91</td>
 <td>92</td>
 <td>93</td>
 <td>94</td>
+<td>91</td>
+<td>92</td>
+<td>93</td>
+<td>94</td>
+<td>91</td>
+</tr>
 </tr>
 </table>
 <script>
@@ -190,11 +239,8 @@ for (var i = 0; i < table.rows.length; i++)
 }
 </script>
 </div>
-<div style="overflow: hidden; margin: 35px auto; max-width: 800px;">
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
-</div>
-
 
 <!-- ****Above is the Entry Form -->
 
@@ -202,5 +248,5 @@ for (var i = 0; i < table.rows.length; i++)
 <table>
 </table>
 <!-- ****Below is the Footer Code -->
-</body>
+   </body>
 </html>
