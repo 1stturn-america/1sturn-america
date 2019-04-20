@@ -52,7 +52,8 @@
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
         console.log(response.result);
-        populateSheet(response.result);
+        populateNet(response.result);
+        populateGross(response.result);
        }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
@@ -178,8 +179,77 @@ table.a {
 </tr>
 </tr>
 </table>
+<br>
+<br>
+<table class=a>
+<tr>
+<td class=scoreEntry>
+  2020 GHETTO (GROSS) STANDINGS
+</td>
+</tr>
+</table>
+
+<table id=tablegross class=a>
+<tr>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+<tr>
+<td>21</td>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+</tr>
+</tr>
+<tr>
+<td>31</td>
+<td>32</td>
+<td>33</td>
+<td>34</td>
+</tr>
+</tr>
+<tr>
+<td>41</td>
+<td>42</td>
+<td>43</td>
+<td>44</td>
+</tr>
+<tr>
+<td>51</td>
+<td>52</td>
+<td>53</td>
+<td>54</td>
+</tr>
+<tr>
+<td>61</td>
+<td>62</td>
+<td>63</td>
+<td>64</td>
+</tr>
+<tr>
+<td>71</td>
+<td>72</td>
+<td>73</td>
+<td>74</td>
+</tr>
+<tr>
+<td>81</td>
+<td>82</td>
+<td>83</td>
+<td>84</td>
+</tr>
+<tr>
+<td>91</td>
+<td>92</td>
+<td>93</td>
+<td>94</td>
+</tr>
+</tr>
+</table>
 <script>
-function populateSheet(result) {
+function populateNet(result) {
 var golfers = result.values;
     table = document.getElementById("table");
 //rows
@@ -189,6 +259,21 @@ for (var i = 0; i < table.rows.length; i++)
     for (var j = 0; j < table.rows[i].cells.length; j++)
     {
         table.rows[i].cells[j].innerHTML = golfers[i] [j];
+    }
+}
+}
+</script>
+<script>
+function populateGross(result) {
+var golfers = result.values;
+    tablegross = document.getElementById("tablegross");
+//rows
+for (var i = 0; i < tablegross.rows.length; i++)
+{
+   //cells
+    for (var j = 0; j < tablegross.rows[i].cells.length; j++)
+    {
+        tablegross.rows[i].cells[j].innerHTML = golfers[i] [j+4];
     }
 }
 }
