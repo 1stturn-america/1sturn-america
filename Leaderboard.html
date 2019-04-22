@@ -3,10 +3,6 @@
   <link rel="stylesheet" type="text/css" href="myStyle.css">
   <!-- *Below is Banner Code -->
 </head>
-<script>
- initClient();
- makeApiCall();
-</script>
   <body bgcolor="#023C78">
    <table>
 <tr>
@@ -250,7 +246,8 @@ table.a {
 </tr>
 </table>
 <script>
-function populateNet(result) {
+function populateNet(result) 
+{
 var golfers = result.values;
     table = document.getElementById("table");
 //rows
@@ -260,6 +257,23 @@ for (var i = 0; i < table.rows.length; i++)
     for (var j = 0; j < table.rows[i].cells.length; j++)
     {
         table.rows[i].cells[j].innerHTML = golfers[i] [j];
+hold=golfers[i] [j];
+if (i>0) 
+ {
+    if (j==2) 
+     {
+       if (hold>0)
+           {
+                  table.rows[i].cells[j].innerHTML = "+"+golfers[i] [j];
+        }
+       if (hold==0)
+           {
+                  table.rows[i].cells[j].innerHTML = "E";
+        }
+      }
+  }
+
+      
     }
 }
 }
@@ -275,6 +289,17 @@ for (var i = 0; i < tablegross.rows.length; i++)
     for (var j = 0; j < tablegross.rows[i].cells.length; j++)
     {
         tablegross.rows[i].cells[j].innerHTML = golfers[i] [j+4];
+
+var z=j+4;
+    hold=golfers[i] [j+4];
+if (i>0) {if (z>5){ if (hold>0)
+{tablegross.rows[i].cells[j].innerHTML = "+"+golfers[i] [j+4];
+      if (hold==0)
+           {
+                  tablegross.rows[i].cells[j].innerHTML = "E";
+        }
+
+}}} 
     }
 }
 }
