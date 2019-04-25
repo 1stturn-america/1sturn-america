@@ -55,3 +55,7 @@ td.blankLast
 	{
   color: #023c78;
 	}
+td.matchesDivider
+	{
+        padding-bottom: 20px
+}
