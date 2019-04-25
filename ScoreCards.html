@@ -394,6 +394,21 @@ for (var i = 0; i < table1.rows.length; i++)
     for (var j = 0; j < table1.rows[i].cells.length; j++)
     {
         table1.rows[i].cells[j].innerHTML = golfers[i] [j];
+
+hold=golfers[i] [j];
+if (i==0) 
+ {
+    if (j==7 || j == 9) 
+     { if (hold>0)
+           {
+                  table1.rows[i].cells[j].innerHTML = "+"+golfers[i] [j];
+        }
+       if (hold==0)
+           {
+                  table1.rows[i].cells[j].innerHTML = "E";
+        }
+      }
+  }
     }
 }
 }
