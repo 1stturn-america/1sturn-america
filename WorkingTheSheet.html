@@ -105,7 +105,72 @@
 </style>
 </div>
 <!-- ****New Code Below -->
+  var html = '<table class=a>';
+  $.each(horses, function(i, word) {
+cell1bgcolor="#023c78";
+//alert(word[1]);
+//added
+if (typeof word[1] === "undefined"){for (var i = 0; i < 22; i++) {word[i]="";}}
+//                                    }
+//added above
 
+     if (word[0]!=="")
+    {
+
+//added
+           if (word[17] == "A") {
+           //   alert("got here");
+                 cell1bgcolor = "Red";}
+                 else if (word[17]=="B") {cell1bgcolor = "Black";}
+                 else if (word[17]=="C") {cell1bgcolor = "Purple";}
+ 
+
+//add above
+
+    html += '<tr><td class=fixwidth>' + word[0] 
+         + '</td><td bgcolor="' + cell1bgcolor + '"+ class=fixwidth>' + word[1] 
+         + '</td><td class=fixwidth>' + word[2] 
+         + '</td><td class=fixwidth>' + word[3] 
+         + '</td><td class=fixwidth>' + word[4] 
+         + '</td><td class=fixwidth>' + word[5] 
+         + '</td><td class=fixwidth>' + word[6] 
+         + '</td><td class=fixwidth>' + word[7] 
+         + '</td><td class=fixwidth>' + word[8] 
+         + '</td><td class=fixwidth>' + word[9] 
+         + '</td><td class=fixwidth>' + word[10] 
+         + '</td><td class=fixwidth>' + word[11] 
+         + '</td><td class=fixwidth>' + word[12] 
+         + '</td><td class=fixwidth>' + word[13] 
+         + '</td><td class=fixwidth>' + word[14] 
+         + '</td><td class=fixwidth>' + word[15] 
+         + '</td><td class=fixwidth>' + word[16] 
+         + '</td><td class=fixwidth>' + word[17] 
+         + '</td><td class=fixwidth>' + word[18] 
+         + '</td><td class=fixwidth>' + word[19] 
+         + '</td><td class=fixwidth>' + word[20]
+         + '</td><td class=fixwidth>' + word[21]
+         + '</td></tr>';
+    }
+    else if (word[1]!=="") {html += '<tr><td class=tblheader colspan="20">' + word[1] + '</tr>';}
+  });
+
+  html += '</table>';
+
+  $("#divResults").append(html);
+}
+  
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+   </head>
+    <body>
+<div style="border: 3px solid rgb(201, 0, 1); overflow: hidden; margin: 35px auto; max-width: 800px;"> 
+<div id="divResults"></div>
+<!-- //<button onclick="addStuff()">Add Stuff</button> -->
+<script>
+addStuff();
+</script>
+</div> 
 
 <!-- ****New Code Above -->
 
