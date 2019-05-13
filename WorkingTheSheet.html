@@ -6,17 +6,14 @@
 
   <!-- *Below is Banner Code -->
 </head>
-<script>
- makeApiCall();
-</script>
   <body bgcolor="#023C78">
 <table>
 <tr>
-<td><a href="index.html"> <img border="0" src="1STTURNPIC.png"></td> 
-<td><a href="TheSheet.html"> <img border="0" src="TheSheet.png"></td> 
-<td><a href="ParlayEntry.html"> <img border="0" src="ParlayEntry.png"></td> 
+<td><a href="index.html"> <img border="0" src="HomePage.png"></td>
+<td><a href="PastPerformances.html"> <img border="0" src="PastPerformances.png"></td> 
+<td><a href="Sheet.html"> <img border="0" src="TheSheet.png"></td> 
 <td><a href="Schedule.html"> <img border="0" src="Schedule.png"></td> 
-<td><a href="RealTimeOdds.html"> <img border="0" src="RealTimeOdds.png"></td> 
+<td><a href="Parlay.html"> <img border="0" src="TheParlay.png"></td> 
 <td><a href="Statistics.html"> <img border="0" src="Statistics.png"></td> 
 </tr>
 </table>
@@ -56,8 +53,7 @@
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
         console.log(response.result);
-        populateNet(response.result);
-        populateGross(response.result);
+        addStuff(response.result);
        }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
@@ -104,7 +100,11 @@
 
 </style>
 </div>
+
 <!-- ****New Code Below -->
+
+function addStuff() {
+  var horses = result.values;
   var html = '<table class=a>';
   $.each(horses, function(i, word) {
 cell1bgcolor="#023c78";
