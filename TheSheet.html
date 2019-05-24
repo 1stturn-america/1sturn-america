@@ -80,15 +80,14 @@
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
    </head>
-<!--<body bgcolor="#023c78"> -->
-<body>
+<body bgcolor="#023c78"> 
 <script type="text/javascript">
 function addStuff(result) {
 alert("got to print horses");
   var horses =  result.values;
   var html = '<table class=a>';
   $.each(horses, function(i, word) {
-cell1bgcolor="white";
+cell1bgcolor="#023c78";
 //alert(word[1]);
 //added
 if (typeof word[1] === "undefined"){for (var i = 0; i < 22; i++) {word[i]="";}}
@@ -99,9 +98,9 @@ if (typeof word[1] === "undefined"){for (var i = 0; i < 22; i++) {word[i]="";}}
 //added
            if (word[18] == "A") {
            //   alert("got here");
-                 cell1bgcolor = "Green";}
-                 else if (word[18]=="B") {cell1bgcolor = "Yellow";}
-                 else if (word[18]=="C") {cell1bgcolor = "Red";}
+                 cell1bgcolor = "Red";}
+                 else if (word[18]=="B") {cell1bgcolor = "Black";}
+                 else if (word[18]=="C") {cell1bgcolor = "Purple";}
  
 //add above
     html += '<tr><td class=fixwidth>' + word[0] 
