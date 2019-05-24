@@ -1,3 +1,45 @@
+table.a {
+  border-style: double;
+  border-color: #023c78;
+  width: 600px;
+  font-family:"arial";
+  background-color: #023c78;
+  color: white;
+  text-align: center; 
+  vertical-align: middle;
+}
+table.a {
+  border-style: double;
+  border-color: white;
+  width: 600px;
+  font-family:"arial";
+  font-size:14px;
+  background-color: #023c78;
+  color: white;
+  text-align: center; 
+  vertical-align: middle;
+}
+td.scoreGross
+	{
+	font-size:35px;
+        font-family:"arial";
+        font-weight: bold;
+	color:#023c78;
+	background-color:white;
+        text-align: center; 
+        vertical-align: middle;
+        padding-right: 7px
+	padding-left: 7px
+	}
+td.scoreEntry
+	{
+	font-size:25px;
+        font-family:"arial";
+	color:#023c78;
+	background-color:white;
+        text-align: center; 
+        vertical-align: middle;
+	}
 td.shiftRight
 	{
   text-align: right; 
@@ -16,30 +58,4 @@ td.blankLast
 td.matchesDivider
 	{
         padding-bottom: 25px
-}
-div.a {
-  width: 800px;
-  nowrap;	
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-table.a {
-  border-style: double;
-  border-color: white;
-  width: 800px;
-  font-family:"arial";
-  background-color: white;
-  color: #023c78;
-  text-align: center; 
-  vertical-align: middle;
-}
-td.tblheader {
-  width: 7px;
-  font-size: 11px;
-  padding-top: 25px
-}
-  td.fixwidth {
-  font-size: 7px;
-  width: 7px;
 }
