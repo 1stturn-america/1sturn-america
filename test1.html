@@ -25,7 +25,7 @@ function getText(){
     //request.open('GET', 'https://www.equibase.com/static/entry/RaceCardIndexGP052319USA-EQB.html', true);
     request.send(null);
     request.onreadystatechange = function () {
-        alert(request.readyState);
+        alert(request.status);
         //alert (request.getResponseHeader);
         //alert (request.responseText);
         if (request.readyState === 4 && request.status === 200) {
