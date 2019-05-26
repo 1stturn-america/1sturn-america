@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>Callat1stTurn</title>
+</head>
+<body onload="populateTables()">
+
+<p id="demo">This is where a table should go.</p>
+
+
+</body>
+</html>
+
+
+<html>
+<head>
+<body>
+<script>
+function getText(){
+    // read text from URL location
+    var request = new XMLHttpRequest();
+    //var request = new HttpRequest();
+    //alert("going to try to get 1stturn");
+    //request.open('GET', 'https://1stturn-america.github.io/1sturn-america/race_table.html', true);
+    request.open('GET', 'https://escortalligator.com.chicago.listcrawler.com', true);
+    //request.open('GET', 'https://www.equibase.com/static/entry/RaceCardIndexGP052319USA-EQB.html', true);
+    request.send(null);
+    request.onreadystatechange = function () {
+        alert(request.readyState);
+        //alert (request.getResponseHeader);
+        //alert (request.responseText);
+        if (request.readyState === 4 && request.status === 200) {
+        //alert (request.getResponseHeader);    
+        var type = request.getResponseHeader('Content-Type');
+            if (type.indexOf("native code") !== 1) {
+                //alert(request.responseText);
+                returnInfo=request.responseText;
+                //alert(returnInfo);
+                var res = returnInfo.split("<table");
+                var inside = res[1].split("</table>");
+                var tableInfo = "<table " + inside[0] + "</table>"
+                document.getElementById("demo").innerHTML = returnInfo;
+                document.getElementById("demo").innerHTML = tableInfo;
+                return request.responseText;
+ 
+            }
+        }
+    }
+}
+
+function populateTables(){
+  
+    //alert("before gettext");
+    var outer_text = getText();
+    //tableinfo = document.getElementById("tableinfo");
+    //tableinfo = returnInfo;
+    //outer_text = outer_text.split('\n');    // you can adjust the manner of parsing the received file (regexp)
+}
+
+</script>
+</body>
+</html>
