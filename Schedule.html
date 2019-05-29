@@ -19,8 +19,9 @@
 <tr>
 <td bgcolor="#023C78" height="30" width="800"> 
 
-<select name="formal" onchange="javascript:handleSelect(this)">
-  <option value=""></option>
+<form id="frm1" onsubmit="return handleSelect()">
+<select name="formal">
+  <option value="">Select Track</option>
   <option value="BEL">Belmont</option>
   <option value="GP">Gulfstream</option>
   <option value="CD">Churchill</option>
@@ -30,24 +31,50 @@
   <option value="PIM">Pimlico</option>
   <option value="WO">Woodbine</option>
 </select>
+  <select name="smth">
+  <option value="">Select Date</option>
+  <option value="05">May</option>
+  <option value="06">June</option>
+   </select>
+  <select name="sdte">
+  <option value="">Select Day</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  </select>
+  <br><br>
+  <input type="button" onclick="myFunction()" value="Submit">
+</form>
+<script>
+function myFunction() {
+  var x = document.forms["frm1"]["formal"].value;
+  var y = document.forms["frm1"]["smth"].value;
+  var z = document.forms["frm1"]["sdte"].value;
+  var xyz = x.concat(y,z);
+  frameurl = "https://www.equibase.com/static/entry/RaceCardIndex"+xyz+"19USA-EQB.html";
+  handleSelect(frameurl);
+  //document.getElementById("frm1").submit();
+}
+</script>
 </td>
 </tr>
 </table>
+</div>
 
-<script type="text/javascript">
-function handleSelect(player)
+
+<script>
+function handleSelect(trackinfo)
 {
 var d = new Date();
 var x = d.getDate();
-frameurl = "https://www.equibase.com/static/entry/RaceCardIndex"+player.value+"052619USA-EQB.html";
-//window.location = player.value+".html";
-document.getElementById("demo").src = frameurl; 
-//alert (frameurl);
+document.getElementById("demo").src = trackinfo; 
 }
 </script>
 
 <div style="border: 3px solid rgb(201, 0, 1); overflow: hidden; margin: 15px auto; max-width: 750px;">
-
 <iframe id="demo" scrolling="no" src="";" style="border: 0px none; margin-left: -43px; margin-right: 0px; height:1200px; margin-top: -400px; width: 800px;">
 </iframe>
 
@@ -58,3 +85,4 @@ document.getElementById("demo").src = frameurl;
 </table>
 </body>   
 </html>
+
