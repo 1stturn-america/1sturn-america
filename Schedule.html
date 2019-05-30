@@ -23,16 +23,13 @@ function myFunction() {
   var e = d.getDate();
   var f = d.getMonth();
       if (Boolean(cc)) {
-      alert("in true code");
               z = e;
               y=f+1
               y="0"+y;}
-      else {("alert in false code");  
-              y = document.forms["frm1"]["smth"].value;
+      else {  y = document.forms["frm1"]["smth"].value;
               z = document.forms["frm1"]["sdte"].value;}
   x = document.forms["frm1"]["formal"].value;
   xyz = x.concat(y,z);
-  alert(xyz);
   frameurl = "https://www.equibase.com/static/entry/RaceCardIndex"+xyz+"19USA-EQB.html";
   document.getElementById("demo").src = frameurl; 
 }
