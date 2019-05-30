@@ -22,8 +22,6 @@ function myFunction() {
   var d = new Date();
   var e = d.getDate();
   var f = d.getMonth();
-  alert("truefalsetest");
-  alert(cc);
       if (Boolean(cc)) {
       alert("in true code");
               z = e;
@@ -32,17 +30,10 @@ function myFunction() {
       else {("alert in false code");  
               y = document.forms["frm1"]["smth"].value;
               z = document.forms["frm1"]["sdte"].value;}
- 
- 
-  alert("aftertest");
-  alert(y+""+z);
   x = document.forms["frm1"]["formal"].value;
   xyz = x.concat(y,z);
   alert(xyz);
   frameurl = "https://www.equibase.com/static/entry/RaceCardIndex"+xyz+"19USA-EQB.html";
-  alert(frameurl);
-  //handleSelect(frameurl);
-  //document.getElementById("frm1").submit();
   document.getElementById("demo").src = frameurl; 
 }
 </script>
