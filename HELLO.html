@@ -18,7 +18,8 @@ const cheerio = require ('cheerio');
 request ('http://www.equibase.com/static/entry/RaceCardIndexGP022020USA-EQB.html', (error,
 response, html) => {
    if (!error && response.statusCode == 200) {
-        console.log(html);
+        //console.log(html);
+        alert ("found it"); 
        }
 });
   
