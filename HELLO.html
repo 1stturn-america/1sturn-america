@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>data demo</title>
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
 <ul id="fruits">
@@ -13,8 +12,8 @@
 </ul>
 <script>
 alert ("before require");
-const request = require ('request');
-const cheerio = require ('cheerio');
+const request = require('request');
+const cheerio = require('cheerio');
 alert ("after require");
 request ('http://www.equibase.com/static/entry/RaceCardIndexGP022020USA-EQB.html', (error,
 response, html) => {
