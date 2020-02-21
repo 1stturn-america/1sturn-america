@@ -12,9 +12,10 @@
   <li class="pear">Pear</li>
 </ul>
 <script>
+alert ("before require");
 const request = require ('request');
 const cheerio = require ('cheerio');
-
+alert ("after require");
 request ('http://www.equibase.com/static/entry/RaceCardIndexGP022020USA-EQB.html', (error,
 response, html) => {
    if (!error && response.statusCode == 200) {
